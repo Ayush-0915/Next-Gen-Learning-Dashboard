@@ -16,13 +16,13 @@ This project was developed as part of a frontend engineering internship assignme
 
 # 🌟 Live Demo
 
-(Add your Vercel deployment link here)
+https://next-gen-learning-dashboard-sable.vercel.app/
 
 ---
 
 # 📂 GitHub Repository
 
-(Add your GitHub repository link here)
+https://github.com/Ayush-0915/Next-Gen-Learning-Dashboard
 
 ---
 
