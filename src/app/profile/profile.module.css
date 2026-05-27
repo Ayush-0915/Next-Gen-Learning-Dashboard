@@ -1,0 +1,396 @@
+.page {
+  width: 100%;
+}
+
+.heroCard {
+  position: relative;
+}
+
+.avatar {
+  box-shadow: 0 20px 50px rgba(139, 92, 246, 0.22);
+}
+
+.sectionCard {
+  transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease;
+}
+
+.sectionCard:hover {
+  transform: translateY(-2px);
+}
+
+.heroGrid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .heroGrid {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    gap: 1.25rem;
+  }
+}
+
+.profileBlock,
+.levelBlock,
+.sidebarCard,
+.panelCard,
+.statCard {
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.015));
+  backdrop-filter: blur(20px);
+}
+
+.profileBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .profileBlock {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.avatarWrap {
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.avatar {
+  display: grid;
+  height: 6.5rem;
+  width: 6.5rem;
+  place-items: center;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #f59e0b 0%, #f97316 18%, #7c3aed 100%);
+  color: #fff;
+  font-size: 1.75rem;
+  font-weight: 700;
+  box-shadow: 0 24px 70px rgba(124, 58, 237, 0.28);
+}
+
+.avatarBadge {
+  position: absolute;
+  right: 0;
+  bottom: 0.15rem;
+  display: grid;
+  height: 1.9rem;
+  width: 1.9rem;
+  place-items: center;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(15, 15, 22, 0.95);
+  color: #d8b4fe;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+.levelBlock {
+  border-radius: 1.5rem;
+  padding: 1rem;
+}
+
+.levelBadge {
+  display: grid;
+  height: 3rem;
+  width: 3rem;
+  place-items: center;
+  border-radius: 9999px;
+  border: 1px solid rgba(168, 85, 247, 0.45);
+  background: rgba(124, 58, 237, 0.12);
+  color: #c084fc;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.progressTrack,
+.barTrack {
+  overflow: hidden;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.progressTrack {
+  height: 0.5rem;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #8b5cf6, #a855f7, #d946ef);
+  box-shadow: 0 0 22px rgba(168, 85, 247, 0.5);
+}
+
+.sidebarCard {
+  border-radius: 1.5rem;
+}
+
+.sidebarIcon {
+  display: grid;
+  height: 2.2rem;
+  width: 2.2rem;
+  place-items: center;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  color: #d8b4fe;
+}
+
+.statCard {
+  border-radius: 1.2rem;
+}
+
+.statIcon {
+  display: grid;
+  height: 2.6rem;
+  width: 2.6rem;
+  place-items: center;
+  border-radius: 0.9rem;
+}
+
+.toneViolet {
+  background: rgba(124, 58, 237, 0.18);
+  color: #c084fc;
+}
+
+.toneEmerald {
+  background: rgba(16, 185, 129, 0.16);
+  color: #6ee7b7;
+}
+
+.toneCyan {
+  background: rgba(14, 165, 233, 0.16);
+  color: #67e8f9;
+}
+
+.toneAmber {
+  background: rgba(245, 158, 11, 0.16);
+  color: #fcd34d;
+}
+
+.toneFuchsia {
+  background: rgba(217, 70, 239, 0.16);
+  color: #f0abfc;
+}
+
+.panelCard {
+  border-radius: 1.4rem;
+}
+
+.progressCardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.ringWrap {
+  position: relative;
+  display: grid;
+  height: 8rem;
+  width: 8rem;
+  place-items: center;
+}
+
+.ringSvg {
+  transform: rotate(-90deg);
+  height: 100%;
+  width: 100%;
+}
+
+.ringTrack,
+.ringFill {
+  fill: none;
+  stroke-width: 8;
+  stroke-linecap: round;
+}
+
+.ringTrack {
+  stroke: rgba(255, 255, 255, 0.08);
+}
+
+.ringFill {
+  stroke: url(#profile-ring-gradient);
+  stroke: #a855f7;
+  stroke-dasharray: 339.292;
+  filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.45));
+}
+
+.ringLabel {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.ringLabel strong {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.ringLabel span {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.barTrack {
+  height: 0.45rem;
+}
+
+.barFill,
+.goalFill {
+  height: 100%;
+  border-radius: inherit;
+}
+
+.barViolet,
+.goalViolet {
+  background: linear-gradient(90deg, #8b5cf6, #a855f7);
+}
+
+.barEmerald,
+.goalEmerald {
+  background: linear-gradient(90deg, #34d399, #10b981);
+}
+
+.barBlue,
+.goalBlue {
+  background: linear-gradient(90deg, #60a5fa, #3b82f6);
+}
+
+.barAmber,
+.goalAmber {
+  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+}
+
+.achievementRow {
+  display: flex;
+  gap: 0.9rem;
+  padding: 0.2rem 0;
+}
+
+.achievementIcon {
+  display: grid;
+  height: 2.65rem;
+  width: 2.65rem;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 0.95rem;
+}
+
+.achievementViolet {
+  background: rgba(124, 58, 237, 0.16);
+  color: #c084fc;
+}
+
+.achievementAmber {
+  background: rgba(245, 158, 11, 0.16);
+  color: #fcd34d;
+}
+
+.achievementEmerald {
+  background: rgba(16, 185, 129, 0.16);
+  color: #6ee7b7;
+}
+
+.achievementBlue {
+  background: rgba(59, 130, 246, 0.16);
+  color: #93c5fd;
+}
+
+.activityMonths {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.5rem;
+  padding-left: 2.1rem;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.activityGrid {
+  display: grid;
+  grid-template-columns: 1.6rem repeat(7, minmax(0, 1fr));
+  gap: 0.35rem;
+  align-items: center;
+}
+
+.activityRowLabel {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.activityCell {
+  aspect-ratio: 1 / 1;
+  border-radius: 0.35rem;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.heat0 {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.heat1 {
+  background: rgba(139, 92, 246, 0.22);
+}
+
+.heat2 {
+  background: rgba(139, 92, 246, 0.34);
+}
+
+.heat3 {
+  background: rgba(139, 92, 246, 0.52);
+}
+
+.heat4 {
+  background: rgba(168, 85, 247, 0.72);
+}
+
+.heatSwatch {
+  display: inline-flex;
+  height: 0.7rem;
+  width: 0.7rem;
+  border-radius: 0.22rem;
+}
+
+.goalRow {
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.02);
+  padding: 1rem;
+}
+
+.goalFill {
+  min-width: 0;
+}
+
+@media (max-width: 639px) {
+  .progressCardHeader {
+    align-items: center;
+  }
+
+  .activityGrid {
+    grid-template-columns: 1.2rem repeat(7, minmax(0, 1fr));
+    gap: 0.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .statCard,
+  .panelCard,
+  .sidebarCard,
+  .heroCard {
+    transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease;
+  }
+
+  .statCard:hover,
+  .panelCard:hover,
+  .sidebarCard:hover {
+    transform: translateY(-2px);
+  }
+}
